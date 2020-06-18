@@ -2,19 +2,14 @@ package com.acguglielmo.operators.impl;
 
 import com.acguglielmo.operators.Operand;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class LessThan implements Operand<Double, Boolean> {
 
     private Operand<Double, Double> operand1;
 
     private Operand<Double, Double> operand2;
-
-    public LessThan( Operand<Double, Double> operand1, Operand<Double, Double> operand2 ) {
-
-        this.operand1 = operand1;
-
-        this.operand2 = operand2;
-
-    }
 
     @Override
     public Boolean evaluate() {

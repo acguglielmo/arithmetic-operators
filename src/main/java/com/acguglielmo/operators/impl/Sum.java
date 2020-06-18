@@ -5,15 +5,12 @@ import java.util.stream.Collectors;
 
 import com.acguglielmo.operators.Operand;
 
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
 public class Sum implements Operand<Double, Double> {
 
     private List<Operand<Double, Double>> operands;
-
-    public Sum(List<Operand<Double, Double>> operands) {
-
-        this.operands = operands;
-
-    }
 
     @Override
     public Double evaluate() {
