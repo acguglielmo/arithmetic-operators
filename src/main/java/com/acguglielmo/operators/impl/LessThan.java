@@ -1,9 +1,8 @@
 package com.acguglielmo.operators.impl;
 
-import com.acguglielmo.operators.AbstractOperand;
 import com.acguglielmo.operators.Operand;
 
-public class LessThan extends AbstractOperand<Double, Boolean> {
+public class LessThan implements Operand<Double, Boolean> {
 
     private Operand<Double, Double> operand1;
 

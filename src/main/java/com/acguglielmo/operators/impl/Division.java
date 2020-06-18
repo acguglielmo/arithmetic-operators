@@ -1,9 +1,8 @@
 package com.acguglielmo.operators.impl;
 
-import com.acguglielmo.operators.AbstractOperand;
 import com.acguglielmo.operators.Operand;
 
-public class Division extends AbstractOperand<Double, Double> {
+public class Division implements Operand<Double, Double> {
 
     private Operand<Double, Double> dividend;
 
