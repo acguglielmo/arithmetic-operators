@@ -30,7 +30,7 @@ public class OperatorsIntegrationTest {
 
         assertEquals(17.0, sum.evaluate(), 0.001);
 
-        final Division div = new Division(new Value(20.0), new Value(10.0));
+        final Division div = Division.of( new Value(20.0), new Value(10.0) );
 
         assertEquals(2.0, div.evaluate(), 0.001);
 
