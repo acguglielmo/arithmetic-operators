@@ -1,8 +1,8 @@
 package com.acguglielmo.operators.impl;
 
-import com.acguglielmo.operators.AbstractOperand;
+import com.acguglielmo.operators.Operand;
 
-public class Value extends AbstractOperand<Double, Double> {
+public class Value implements Operand<Double, Double> {
 
     private final Double value;
 

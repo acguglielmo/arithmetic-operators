@@ -3,10 +3,9 @@ package com.acguglielmo.operators.impl;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.acguglielmo.operators.AbstractOperand;
 import com.acguglielmo.operators.Operand;
 
-public class Subtraction extends AbstractOperand<Double, Double> {
+public class Subtraction implements Operand<Double, Double> {
 
     private List<Operand<Double, Double>> operands;
 
