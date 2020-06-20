@@ -2,7 +2,6 @@ package com.acguglielmo.operators.impl;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -14,11 +13,10 @@ public class SubtractionTest {
     @Test
     public void testEvaluate() throws Exception {
 
-        final List<Operand<Double, Double>> operands = new ArrayList<>();
-        operands.add( new Value(2.0) );
-        operands.add( new Value(2.0) );
+    	final List<Operand<Double, Double>> operands =
+    		List.of( new Value(2.0), new Value(2.0) );
 
-        final Double result = new Subtraction(operands).evaluate();
+        final Double result = Subtraction.of(operands).evaluate();
 
         assertEquals(0.0, result, 0.01);
 
@@ -27,11 +25,10 @@ public class SubtractionTest {
     @Test
     public void testToString() throws Exception {
 
-        final List<Operand<Double, Double>> operands = new ArrayList<>();
-        operands.add( new Value(2.0) );
-        operands.add( new Value(2.0) );
+    	final List<Operand<Double, Double>> operands =
+        	List.of( new Value(2.0), new Value(2.0) );
 
-        final String result = new Subtraction(operands).toString();
+        final String result = Subtraction.of(operands).toString();
 
         assertEquals("( 2.0 - 2.0 )", result);
 
