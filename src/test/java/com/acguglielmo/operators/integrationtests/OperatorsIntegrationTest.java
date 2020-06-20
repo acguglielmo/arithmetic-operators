@@ -35,7 +35,7 @@ public class OperatorsIntegrationTest {
 
         assertTrue(gt.evaluate());
 
-        final LessThan lt = new LessThan(sum, div);
+        final LessThan lt = LessThan.of( sum, div );
 
         assertFalse(lt.evaluate());
 
