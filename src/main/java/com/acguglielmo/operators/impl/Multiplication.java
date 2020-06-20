@@ -5,13 +5,17 @@ import java.util.stream.Collectors;
 
 import com.acguglielmo.operators.Operand;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor( access = AccessLevel.PRIVATE )
 public class Multiplication implements Operand<Double, Double> {
 
     private List<Operand<Double, Double>> operands;
 
-    public Multiplication(List<Operand<Double, Double>> operands) {
+    public static Multiplication of( final List<Operand<Double, Double>> operands ) {
 
-        this.operands = operands;
+    	return new Multiplication(operands);
 
     }
 

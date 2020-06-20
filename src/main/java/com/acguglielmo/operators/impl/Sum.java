@@ -5,13 +5,17 @@ import java.util.stream.Collectors;
 
 import com.acguglielmo.operators.Operand;
 
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor( access = AccessLevel.PRIVATE )
 public class Sum implements Operand<Double, Double> {
 
     private List<Operand<Double, Double>> operands;
 
-    public Sum(List<Operand<Double, Double>> operands) {
+    public static Sum of( final List<Operand<Double, Double>> operands ) {
 
-        this.operands = operands;
+    	return new Sum( operands );
 
     }
 

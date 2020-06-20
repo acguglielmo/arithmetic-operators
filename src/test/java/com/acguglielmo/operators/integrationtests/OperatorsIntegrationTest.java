@@ -4,7 +4,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -21,24 +20,22 @@ public class OperatorsIntegrationTest {
     @Test
     public void shouldWorkAccordingRequestedInHackerrank() {
 
-        final List<Operand<Double, Double>> sumOperands = new ArrayList<>();
-        sumOperands.add( new Value(10.0) );
-        sumOperands.add( new Value(5.0) );
-        sumOperands.add( new Value(2.0) );
+    	final List<Operand<Double, Double>> sumOperands =
+    			List.of( new Value(10.0), new Value(5.0), new Value(2.0) );
 
-        final Sum sum = new Sum( sumOperands );
+        final Sum sum = Sum.of( sumOperands );
 
         assertEquals(17.0, sum.evaluate(), 0.001);
 
-        final Division div = new Division(new Value(20.0), new Value(10.0));
+        final Division div = Division.of( new Value(20.0), new Value(10.0) );
 
         assertEquals(2.0, div.evaluate(), 0.001);
 
-        final GreaterThan gt = new GreaterThan(sum, div);
+        final GreaterThan gt = GreaterThan.of( sum, div );
 
         assertTrue(gt.evaluate());
 
-        final LessThan lt = new LessThan(sum, div);
+        final LessThan lt = LessThan.of( sum, div );
 
         assertFalse(lt.evaluate());
 

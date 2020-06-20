@@ -10,7 +10,7 @@ public class LessThanTest {
     @Test
     public void testEvaluate() throws Exception {
 
-        final LessThan lessThan =  new LessThan(new Value(2.0), new Value(2.0));
+        final LessThan lessThan = LessThan.of( new Value(2.0), new Value(2.0) );
 
         final Boolean result = lessThan.evaluate();
 
@@ -21,7 +21,7 @@ public class LessThanTest {
     @Test
     public void testToString() throws Exception {
 
-        final LessThan lessThan =  new LessThan(new Value(2.0), new Value(2.0));
+        final LessThan lessThan = LessThan.of( new Value(2.0), new Value(2.0) );
 
         final String result = lessThan.toString();
 
