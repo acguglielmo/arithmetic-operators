@@ -31,7 +31,7 @@ public class OperatorsIntegrationTest {
 
         assertEquals(2.0, div.evaluate(), 0.001);
 
-        final GreaterThan gt = new GreaterThan(sum, div);
+        final GreaterThan gt = GreaterThan.of( sum, div );
 
         assertTrue(gt.evaluate());
 
