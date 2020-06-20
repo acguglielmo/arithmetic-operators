@@ -19,6 +19,7 @@ jobs:
       with:
         java-version: 11
         fail_ci_if_error: true
+        file: target/site/jacoco/jacoco.xml
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Code coverage with Codecov
