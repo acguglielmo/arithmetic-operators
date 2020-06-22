@@ -9,7 +9,7 @@ public class DivisionTest {
     @Test
     public void testEvaluate() throws Exception {
 
-        final Division division =  Division.of(new Value(2.0), new Value(2.0));
+        final Division division =  Division.of( Value.of(2.0), Value.of(2.0) );
 
         final Double result = division.evaluate();
 
@@ -20,7 +20,7 @@ public class DivisionTest {
     @Test
     public void testToString() throws Exception {
 
-        final Division division = Division.of(new Value(2.0), new Value(2.0));
+        final Division division = Division.of( Value.of(2.0), Value.of(2.0) );
 
         final String result = division.toString();
 

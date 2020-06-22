@@ -10,7 +10,7 @@ public class GreaterThanTest {
     @Test
     public void testEvaluate() throws Exception {
 
-        final GreaterThan greaterThan = GreaterThan.of( new Value(2.0), new Value(2.0) );
+        final GreaterThan greaterThan = GreaterThan.of( Value.of(2.0), Value.of(2.0) );
 
         final Boolean result = greaterThan.evaluate();
 
@@ -21,7 +21,7 @@ public class GreaterThanTest {
     @Test
     public void testToString() throws Exception {
 
-        final GreaterThan greaterThan = GreaterThan.of(new Value(2.0), new Value(2.0));
+        final GreaterThan greaterThan = GreaterThan.of( Value.of(2.0), Value.of(2.0) );
 
         final String result = greaterThan.toString();
 

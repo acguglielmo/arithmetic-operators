@@ -9,7 +9,7 @@ public class ValueTest {
     @Test
     public void testEvaluate() throws Exception {
 
-        final Double result = new Value(5.0).evaluate();
+        final Double result = Value.of(5.0).evaluate();
 
         assertEquals(5.0, result, 0.01);
 
@@ -18,7 +18,7 @@ public class ValueTest {
     @Test
     public void testToString() throws Exception {
 
-        final String result = new Value(5.0).toString();
+        final String result = Value.of(5.0).toString();
 
         assertEquals("5.0", result);
 

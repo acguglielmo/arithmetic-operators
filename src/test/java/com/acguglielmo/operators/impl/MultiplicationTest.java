@@ -14,7 +14,7 @@ public class MultiplicationTest {
     public void testEvaluate() throws Exception {
 
     	final List<Operand<Double, Double>> operands =
-    		List.of( new Value(2.0), new Value(6.0) );
+    		List.of( Value.of(2.0), Value.of(6.0) );
 
         final Double result = Multiplication.of(operands).evaluate();
 
@@ -26,7 +26,7 @@ public class MultiplicationTest {
     public void testToString() throws Exception {
 
     	final List<Operand<Double, Double>> operands =
-        	List.of( new Value(6.0), new Value(2.0) );
+        	List.of( Value.of(6.0), Value.of(2.0) );
 
         final String result = Multiplication.of(operands).toString();
 

@@ -14,7 +14,7 @@ public class SumTest {
     public void testEvaluate() throws Exception {
 
         final List<Operand<Double, Double>> operands =
-        	List.of( new Value(2.0), new Value(2.0) );
+        	List.of( Value.of(2.0), Value.of(2.0) );
 
         final Double result = Sum.of( operands ).evaluate();
 
@@ -26,7 +26,7 @@ public class SumTest {
     public void testToString() throws Exception {
 
         final List<Operand<Double, Double>> operands =
-            List.of( new Value(2.0), new Value(2.0) );
+            List.of( Value.of(2.0), Value.of(2.0) );
 
         final String result = Sum.of( operands ).toString();
 

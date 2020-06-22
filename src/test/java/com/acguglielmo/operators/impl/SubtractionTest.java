@@ -14,7 +14,7 @@ public class SubtractionTest {
     public void testEvaluate() throws Exception {
 
     	final List<Operand<Double, Double>> operands =
-    		List.of( new Value(2.0), new Value(2.0) );
+    		List.of( Value.of(2.0), Value.of(2.0) );
 
         final Double result = Subtraction.of(operands).evaluate();
 
@@ -26,7 +26,7 @@ public class SubtractionTest {
     public void testToString() throws Exception {
 
     	final List<Operand<Double, Double>> operands =
-        	List.of( new Value(2.0), new Value(2.0) );
+        	List.of( Value.of(2.0), Value.of(2.0) );
 
         final String result = Subtraction.of(operands).toString();
 
